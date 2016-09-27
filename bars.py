@@ -55,7 +55,7 @@ if __name__ == '__main__':
         try:
             longitude = float(input('Введите долготу:\n'))
             latitude = float(input('Введите широту:\n'))
-            print(get_closest_bar(path_to_file, longitude, latitude))
+            print('Ближайший бар: ' + get_closest_bar(path_to_file, longitude, latitude))
             break
         except ValueError:
             print('Введите координату в корректном формате. Пример: х.ххххххххххххххх')
