@@ -36,7 +36,7 @@ def get_closest_bar(data, longitude, latitude):
     for bar in loadeddata:
         bar_longtitude = bar['Cells']['geoData']['coordinates'][0]
         bar_latitude = bar['Cells']['geoData']['coordinates'][1]
-        if distance < math.sqrt((bar_longtitude - longitude) ** 2 + (bar_latitude - latitude) ** 2):
+        if distance > math.sqrt((bar_longtitude - longitude) ** 2 + (bar_latitude - latitude) ** 2):
             distance = math.sqrt((bar_longtitude - longitude) ** 2 + (bar_latitude - latitude) ** 2)
             closestbar = bar['Cells']['Name']
     return closestbar
